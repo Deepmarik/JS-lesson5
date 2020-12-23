@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>добавление класса</title>
+</head>
+
+<body>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+
+    <!-- Задание. Найдите тег ul. И добавьте ему класс one. -->
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+    </ul>
+
+    <!-- Задание. Найдите элемент с классом .nav-link и используя метод toggle из свойства classList
+    у элемента, добавьте или уберите класс .active. -->
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    <!-- Задание. Найдите элемент с классом .dropdown-menu и удалите этот класс, используя свойство classList
+    у элемента, и метод remove(). -->
+    <script>
+        "use strict";
+        let ul = document.querySelector("ul");
+        ul.classList.add("one");
+        console.dir(ul);
+        // let a = document.querySelector("a");
+        const elem = document.getElementsByClassName("nav-link");
+        /*  elem.forEach(function (item) {
+             classList.toggle("active");
+         }); */
+        for (let i = 0; i < elem.length - 1; i++) {
+            elem[i].classList.toggle("active");
+
+        }
+        console.log(elem);
+        Array.from(elem).forEach((el) => {
+            classList.toggle("active")
+        });
+        //a.classList.toggle("active");
+        console.log(elem);
+        let div = document.querySelector(".dropdown-menu");
+        div.classList.toggle("dropdown-menu");
+        console.log(div);
+    </script>
+</body>
+
+</html>
