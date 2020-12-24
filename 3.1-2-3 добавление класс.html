@@ -47,19 +47,17 @@
         /*  elem.forEach(function (item) {
              classList.toggle("active");
          }); */
+        Array.from(elem).forEach((item) => item.classList.toggle("active1"));
         for (let i = 0; i < elem.length - 1; i++) {
             elem[i].classList.toggle("active");
 
         }
         console.log(elem);
-        Array.from(elem).forEach((el) => {
-            classList.toggle("active")
-        });
-        //a.classList.toggle("active");
-        console.log(elem);
-        let div = document.querySelector(".dropdown-menu");
+       
+        const dropdown=document.getElementsByClassName("dropdown-menu");
+        Array.from(dropdown).forEach((item)=>item.classList.toggle("dropdown-menu"));
         div.classList.toggle("dropdown-menu");
-        console.log(div);
+        console.log(dropdown);
     </script>
 </body>
 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 3.4-5-6</title>
 </head>
+
 <body>
     <div class="menu"></div>
 
@@ -14,6 +16,9 @@
     -->
     <script>
         "use strict";
+        const div = document.getElementsByClassName("menu");
+        Array.from(div).forEach((item) => item.insertAdjacentHTML("afterbegin", '<a href="#">link</a>'));
     </script>
 </body>
+
 </html>
