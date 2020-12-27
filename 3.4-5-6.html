@@ -14,10 +14,49 @@
     <a href="#">link</a>
     используя метод insertAdjacentHTML.
     -->
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <!-- Задание. Выведите в консоль значение атрибутов data-dismiss
+    и aria-label с помощью метода getAttribute. -->
+
+    <h1>Заголовок</h1>
+
+    <!-- Задание. Добавьте заголовку атрибут data-one="один" и атрибут
+    data-two="два" с помощью метода setAttribute. -->
+    <article>
+        <h2>title</h2>
+        text
+    </article>
+    <article>
+        <h2 id="title">title</h2>
+        text
+    </article>
+
+    <!-- Задание. найдите заголовок с id="title" и замените значение id
+    на что-то другое. -->
+
     <script>
         "use strict";
         const div = document.getElementsByClassName("menu");
         Array.from(div).forEach((item) => item.insertAdjacentHTML("afterbegin", '<a href="#">link</a>'));
+        //getAttribute
+        let button = document.querySelector("button");
+        console.log(button.getAttribute("data-dismiss"));
+        console.log(button.getAttribute("aria-label"));
+        //setAtribute
+        let h1 = document.querySelector("h1");
+        let atrr='data-one';
+        let newAtrrVal="один";
+        
+       h1.setAttribute(atrr, newAtrrVal);
+       atrr="data-two";
+       newAtrrVal="два";
+       h1.setAttribute(atrr, newAtrrVal);
+       // замена id
+       let titl=document.getElementById("title");
+       titl.setAttribute('id', 'first');
     </script>
 </body>
 
